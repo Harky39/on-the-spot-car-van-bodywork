@@ -38,6 +38,7 @@
       <a href="#home" class="active">Home</a>
       <a href="#services">Services</a>
       <a href="#work">Our Work</a>
+      <a href="#estimate">Estimate</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a href="tel:+447505764766" class="btn btn-primary btn-sm nav-call">Call 07505 764766</a>
@@ -200,6 +201,65 @@
     </div>
   </section>
 
+  <!-- ============ INSTANT ESTIMATE ============ -->
+  <section class="section estimate" id="estimate">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Instant estimate</p>
+        <h2>What will it cost?</h2>
+        <p class="section-sub">Tell us a little about the damage and we'll show you an honest guide price straight away — no waiting for a callback.</p>
+      </header>
+
+      <div class="estimate-box reveal">
+        <div class="estimate-fields">
+          <label for="estVehicle">Vehicle type</label>
+          <select id="estVehicle" name="estVehicle">
+            <option value="car">Car</option>
+            <option value="van">Van or 4x4</option>
+          </select>
+
+          <label for="estDamage">What's the damage?</label>
+          <select id="estDamage" name="estDamage">
+            <option value="dent">Dent, crease or knock</option>
+            <option value="scratch">Scratch or scrape</option>
+            <option value="crack">Cracked / broken panel</option>
+            <option value="respray">Respray only (no repair needed)</option>
+          </select>
+
+          <label for="estSize" id="estSizeLabel">How big is it?</label>
+          <select id="estSize" name="estSize"></select>
+
+          <div class="estimate-row">
+            <div class="estimate-col" id="estPanelsWrap">
+              <label for="estPanels">Panels affected</label>
+              <select id="estPanels" name="estPanels">
+                <option value="1">Just one panel</option>
+                <option value="2">Two panels</option>
+                <option value="3">Three or more</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="estimate-result" id="estResult">
+          <p class="est-prompt" id="estPrompt">Pick your options on the left and your guide price will appear here.</p>
+          <div class="est-price-wrap" id="estPriceWrap" hidden>
+            <span class="est-label">Guide price</span>
+            <span class="est-price" id="estPrice">&pound;0 &ndash; &pound;0</span>
+            <p class="est-note" id="estNote"></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="estimate-disclaimer reveal">Guide prices only — every job is different. We'll confirm the exact figure after looking at the vehicle, usually over the phone with photos.</p>
+
+      <div class="work-cta estimate-cta reveal">
+        <a href="#contact" class="btn btn-primary btn-lg">Request a firm quote</a>
+        <a href="tel:+447505764766" class="link-light">or call 07505 764766</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ABOUT ============ -->
   <section class="section about" id="about">
     <div class="container about-grid">
@@ -270,9 +330,20 @@
           <label for="message">What needs repairing?</label>
           <textarea id="message" name="message" rows="4" placeholder="e.g. Dented rear wing after a kerb hit, scratch down the door…"></textarea>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send request</button>
-          <p class="form-note">This opens your email app with everything pre-filled — just hit send.</p>
+          <label for="photos">Photos of the damage (optional)</label>
+          <input type="file" id="photos" name="photos" accept="image/*" multiple />
+          <p class="form-note form-note-top">Up to 4 photos — they're sent straight through with your request.</p>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="quoteSubmit">Send request</button>
+          <p class="form-note" id="formNote">Your details and photos go direct to our inbox — we'll get back to you shortly.</p>
         </form>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <span class="icon icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <h3>Request sent — thank you!</h3>
+          <p id="formSuccessMsg">We've got your details and will get back to you with a quote shortly.</p>
+          <button type="button" class="btn btn-ghost" id="formAgain">Send another request</button>
+        </div>
       </div>
     </div>
   </section>
@@ -299,6 +370,7 @@
     <nav class="footer-nav" aria-label="Footer navigation">
       <a href="#services">Services</a>
       <a href="#work">Our Work</a>
+      <a href="#estimate">Estimate</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -307,6 +379,9 @@
       <a href="tel:+447505764766">07505 764766</a>
       <a href="mailto:peter.hark89@gmail.com">peter.hark89@gmail.com</a>
     </div>
+  </div>
+  <div class="container footer-sister">
+    <p>Also see our sister service: <a href="https://harky39.github.io/on-the-spot-caravan-repairs/">On The Spot Caravan Repairs &rarr;</a></p>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year">2026</span> On The Spot Car &amp; Van Bodywork &middot; Cotswolds, UK</p>
