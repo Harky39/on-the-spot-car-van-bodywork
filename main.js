@@ -512,6 +512,16 @@
           ["Full vehicle", 900, 2500]
         ],
         noPanels: true
+      },
+      alloys: {
+        label: "How many wheels need work?",
+        sizes: [
+          ["One wheel", 60, 120],
+          ["Two wheels", 110, 220],
+          ["Three wheels", 150, 300],
+          ["Full set of four", 200, 420]
+        ],
+        noPanels: true
       }
     }
   };
